@@ -19,4 +19,24 @@ const images = [{
     },
 ];
 
-const galery = document.querySelector('#gallety')
+const gallery = document.querySelector('#gallery')
+// console.log(gallery);
+
+function addGallery(arr) {
+    let list = []
+
+    for (let obj of arr) {
+        let object = obj;
+        const listLi = document.createElement('li')
+        const img = document.createElement('img')
+        listLi.append(img)
+        img.setAttribute('src', object['url'])
+        img.setAttribute('alt', object['alt'])
+        listLi.innerHTML
+        gallery.insertAdjacentHTML("afterbegin", `${listLi.outerHTML}`)
+
+    }
+    return gallery
+}
+
+console.log(addGallery(images));

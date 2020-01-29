@@ -1,0 +1,38 @@
+#gallery {
+  display: flex;
+  list-style: none;
+}
+
+img {
+
+  max-width: 300px;
+  padding: 5px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+#name-input {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#validation-input {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+#controls {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}

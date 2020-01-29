@@ -1,3 +1,5 @@
+'use strict'
+
 // Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
 
 // Создай переменную counterValue в которой будет хранится текущее значение счетчика.
@@ -12,3 +14,30 @@
 //     button type = "button"
 // data - action = "increment" > +1 < /button> <
 //     /div>
+
+const decrement = document.querySelector('[data-action="decrement"]')
+const increment = document.querySelector('[data-action="increment"]')
+const span = document.querySelector('#value')
+
+// console.dir(span);
+// console.log(increment);
+// console.log(span);
+
+let counterValue = 0;
+
+function incrementAdd() {
+    counterValue++
+    span.textContent = counterValue
+    // console.log(span);
+    return
+}
+
+function decrementRemove() {
+    counterValue--
+    span.textContent = counterValue
+    // console.log(span);
+    return
+}
+
+increment.addEventListener('click', incrementAdd)
+decrement.addEventListener('click', decrementRemove)
