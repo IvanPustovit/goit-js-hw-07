@@ -13,28 +13,16 @@ const ingredients = [
 
 const newListUl = document.querySelector("#ingredients");
 
-const listIngredients = function(arr) {
+const listIngredients = function (arr) {
+
   for (let el of arr) {
     const newListLi = document.createElement("li");
     newListLi.classList.add("item");
     const listText = document.createTextNode(el);
     newListLi.appendChild(listText);
-    newListUl.append(newListLi);
+    newListUl.appendChild(newListLi);
   }
   return newListUl;
 };
 
-// const listIngredients = function (arr) {
-//   const newListUl = document.createElement("ul");
-//   newListUl.id = "ingredients";
-
-//   for (let el of arr) {
-//     const newListLi = document.createElement("li");
-//     const listText = document.createTextNode(el)
-//     newListLi.appendChild(listText)
-//     newListUl.append(newListLi)
-//   }
-//   return newListUl
-// }
-
-console.log(listIngredients(ingredients));
+listIngredients(ingredients);

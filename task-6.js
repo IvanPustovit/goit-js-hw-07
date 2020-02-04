@@ -12,16 +12,13 @@
 // Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
 
 const validInput = document.querySelector('#validation-input')
-// console.dir(validInput);
 
 function validation(e) {
+    validInput.classList.add('invalid');
     if (e.target.value.length == validInput.dataset.length) {
-        validInput.classList.add('valid')
-        validInput.classList.remove('invalid')
-    } else {
-        validInput.classList.add('invalid')
-        validInput.classList.remove('valid')
-    }
+        validInput.classList.add('valid');
+        validInput.classList.remove('invalid');
+    } 
 }
 
 validInput.addEventListener('blur', validation)

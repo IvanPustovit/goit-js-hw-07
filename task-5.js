@@ -8,10 +8,8 @@
 const nameInput = document.querySelector('#name-input')
 const nameOutput = document.querySelector('#name-output')
 
-function name (e){
-    if(!e.target.value){
-        nameOutput.textContent = 'незнакомец'
-    } else nameOutput.textContent = e.target.value
+function name(e) {
+    !e.target.value ? nameOutput.textContent = 'незнакомец' : nameOutput.textContent = e.target.value
 }
 
 

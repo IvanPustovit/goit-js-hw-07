@@ -12,21 +12,12 @@
 
 const listArr = document.querySelectorAll('.item')
 // console.log(listArr);
+console.log(`В списке ${listArr.length} категории.`);
 
-Array.prototype.forEach.call(listArr,(element) => {
-    const listName = element.querySelector('li>h2').textContent
+Array.prototype.forEach.call(listArr, (element) => {
+    const listName = element.querySelector('.title').textContent
     // console.log(listName);
-    const listArrLength = element.querySelectorAll('li').length
+    const listArrLength = element.querySelectorAll('.title__list').length
     // console.log(listArrLength);
     console.log(`В категории: ${listName}, количество элементов: ${listArrLength}`);
 })
-    
-
-
-
-
-
-// document.querySelector('li.item>h2');
-// console.log(listName.textContent);
-
-// const iteam = document.getElementsByTagName ('ul#categories')
