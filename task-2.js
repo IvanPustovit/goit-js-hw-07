@@ -13,16 +13,12 @@ const ingredients = [
 
 const newListUl = document.querySelector("#ingredients");
 
-const listIngredients = function (arr) {
+const addLi = function (el) {
+  const newListLi = document.createElement("li")
+  newListLi.append(el)
+  return newListLi
+}
 
-  for (let el of arr) {
-    const newListLi = document.createElement("li");
-    newListLi.classList.add("item");
-    const listText = document.createTextNode(el);
-    newListLi.appendChild(listText);
-    newListUl.appendChild(newListLi);
-  }
-  return newListUl;
-};
+let listUl = ingredients.map(el => addLi(el))
 
-listIngredients(ingredients);
+newListUl.append(...listUl)

@@ -26,11 +26,11 @@ const span = document.querySelector('#value')
 let counterValue = 0;
 
 function incrementAdd() {
-    return span.textContent = counterValue++
+    return span.textContent = ++counterValue
 }
 
 function decrementRemove() {
-    return span.textContent = counterValue--
+    return span.textContent = --counterValue
 }
 
 increment.addEventListener('click', incrementAdd)
