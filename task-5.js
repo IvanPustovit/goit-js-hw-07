@@ -7,10 +7,10 @@
 
 const nameInput = document.querySelector('#name-input')
 const nameOutput = document.querySelector('#name-output')
-console.dir(nameOutput);
+
 function name(e) {
     e.target.value ? nameOutput.textContent = e.target.value : nameOutput.textContent = 'незнакомец'
-    
+
 }
 
 
