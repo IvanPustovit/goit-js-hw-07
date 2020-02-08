@@ -19,6 +19,6 @@ const addLi = function (el) {
   return newListLi
 }
 
-let listUl = ingredients.map(el => addLi(el))
+const listUl = ingredients.map(el => addLi(el))
 
 newListUl.append(...listUl)

@@ -13,7 +13,7 @@
 const listArr = document.querySelectorAll('.item')
 console.log(`В списке ${listArr.length} категории.`);
 
-Array.prototype.forEach.call(listArr, (element) => {
+listArr.forEach.call(listArr, (element) => {
     const listName = element.querySelector('.title').textContent
     const listArrLength = element.querySelectorAll('.title__list').length
     console.log(`В категории: ${listName}, количество элементов: ${listArrLength}`);

@@ -9,8 +9,11 @@ const nameInput = document.querySelector('#name-input')
 const nameOutput = document.querySelector('#name-output')
 
 function name(e) {
-    e.target.value ? nameOutput.textContent = e.target.value : nameOutput.textContent = 'незнакомец'
+    let nameOut = e.target.value ? nameOutput.textContent = e.target.value : nameOutput.textContent = 'незнакомец'
 
+    return nameOut
+
+    // nameInput.textContent = e.target.value ? nameOutput.textContent = e.target.value : nameOutput.textContent = 'незнакомец'
 }
 
 
